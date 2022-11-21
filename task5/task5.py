@@ -1,17 +1,22 @@
-def task(dataA,dataB):
-
+def task(str1,str2):
+  import json
   import numpy as np
-
+  import nums_from_string
+  dataA = json.loads(str1)
+  dataB = json.loads(str2)
   def mas(A):
-    numbers=[]
+    #print(A)
+    #print(nums_from_string.get_nums(A))
+    numbers = []
     for item in A:
+      #print(item)
       try:
         numbers.append(int(item))
       except:
-        mas=[]
+        mass=[]
         for i in range(len(item)):
-          mas.append(int(item[i]))
-        numbers.append(mas)
+          mass.append(int(item[i]))
+        numbers.append(mass)
     return numbers
 
   def get_table(numbers):
